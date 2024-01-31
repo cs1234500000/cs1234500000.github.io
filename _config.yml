@@ -83,10 +83,10 @@ author:
   name             : "Shu Chen"
   avatar           : "profile.png"
   bio              : "1st year PhD Student"
-  location         : "the United States"
+  location         : #"the United States"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  googlescholar    : #"http://yourfullgooglescholarurl.com"
   email            : "s388chen@alumni.upenn.edu"
   researchgate     : "https://www.researchgate.net/profile/Shu-Chen-48"
   uri              :
@@ -103,7 +103,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "https://www.linkedin.com/in/shu-chen-69a36614a/"
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -112,9 +112,10 @@ author:
   twitter          : "shirley98734"
   vine             :
   weibo            :
-  xing             :
+  xing             : 
   youtube          :
   wikipedia        :
+  xiaohongshu      : "https://www.xiaohongshu.com/user/profile/586557d250c4b43a193e970f"
 
 
 # Reading Files
