@@ -11,30 +11,31 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Ph.D in Computer Science, University
+* M.S.E in Computer Information Science, University of Pennsylvania, 2022
+* B.Math in Statistics and Actuarial Sciences, University of Waterloo, 2017
+
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2023: Software Engineer, Huawei Technologies
+    
+* 2022: Research Intern, Tecent Inc.
+    
+* 2018 - 2020: Data Scientist, MDG Canada
+    
+* 2018: Research Assistant, Western University
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Data Management
+* Machine Learning
+* Computer Programming
+  * C++
+  * Java
+  * Python
+
 
 Publications
 ======
@@ -56,4 +57,13 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* WIT (Women in Technology)
+* WWCode (Women Who Code)
+* OSTEM (Out in Science, Technology, Engineering, and Mathematics)
+* China Foundation for Poverty Alleviation
+
+Honours and awards
+======
+* President’s Scholarship, 2015
+* Math/ELAS Scholarship, 2015
+* Graduation with Distinction, 2018
