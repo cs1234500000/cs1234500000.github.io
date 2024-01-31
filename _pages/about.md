@@ -14,3 +14,15 @@ I am a first-year PhD student in Computer Science at University. I received my M
 My work has leveraged techniques from machine learning, data management systems, parallel and distributed systems. I am interested in machine learning for computer systems, especially database systems. The goal of my research is to enhance traditional core system components using ML.
 
 If you are interested, please email me [s388chen@alumni.upenn.edu](s388chen@alumni.upenn.edu).
+
+# Research Projects
+In the following, a list of my current and past research projects:
+- Deep Reinforcement Learning on Cache Replacement Algorithm
+  
+- Deep Learning on Cardinality Estimation
+
+- Deep Reinforcement Learning on Query Optimization
+
+- Key-Value separated LSM-tree
+
+
