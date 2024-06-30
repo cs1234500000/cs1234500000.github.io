@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-I am a PhD student in Computer Science at Brown University supervised by Prof. Ugur Cetintemel. I received my Master's degree from University of Pennsylvania and my Bachelor's degree from University of Waterloo. Prior to joining Brown University, I worked as a Software Engineer at Huawei and Tencent for three years. 
+I am a PhD student in the Department Computer Science at Brown University, where I'm advised by Prof. Ugur Cetintemel. I received my Master's degree from University of Pennsylvania and my Bachelor's degree from University of Waterloo. Prior to joining Brown University, I worked as a Software Engineer at Huawei and Tencent for three years. 
 
 My work has leveraged techniques from machine learning, data management systems, parallel and distributed systems. I am interested in machine learning for computer systems, especially database systems. The goal of my research is to enhance traditional core system components using ML.
 
