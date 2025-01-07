@@ -1,0 +1,21 @@
+<div class="talk-item">
+    <h2 class="talk-item__title">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+    </h2>
+
+    <div class="talk-item__meta">
+        <i class="fas fa-calendar-alt"></i> {{ post.date | date: "%B %d, %Y" }}
+        <span class="talk-item__separator">|</span>
+        <i class="fas fa-map-marker-alt"></i> {{ post.venue }}
+        {% if post.location %}
+        <span class="talk-item__separator">|</span>
+        {{ post.location }}
+        {% endif %}
+    </div>
+
+    {% if post.excerpt %}
+    <div class="talk-item__description">
+        {{ post.excerpt | markdownify }}
+    </div>
+    {% endif %}
+</div>

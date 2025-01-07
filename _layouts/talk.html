@@ -4,75 +4,135 @@ layout: default
 
 {% include base_path %}
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
+<div class="talk-container">
+  <article class="talk" itemscope itemtype="http://schema.org/Event">
+    <!-- Header Section -->
+    <div class="talk__header">
+      <h1 class="talk__title" itemprop="name">{{ page.title }}</h1>
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
-    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
-
-    <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% if page.read_time %}
-            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+      <div class="talk__meta">
+        <div class="talk__venue">
+          <i class="fas fa-map-marker-alt"></i>
+          <span itemprop="location">{{ page.venue }}</span>
+          {% if page.location %}
+          <span class="talk__location">| {{ page.location }}</span>
           {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+        </div>
+
+        <div class="talk__date">
+          <i class="fas fa-calendar-alt"></i>
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: "%B %d, %Y" }}
+          </time>
+        </div>
+
+        {% if page.talk_type %}
+        <div class="talk__type">
+          <i class="fas fa-tag"></i>
+          {{ page.talk_type }}
+        </div>
         {% endif %}
-        {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
+      </div>
 
-        </header>
-      {% endunless %}
-
-      <section class="page__content" itemprop="text">
-        {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
-      </section>
-
-      <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-        {% endif %}
-        {% include page__taxonomy.html %}
-      </footer>
-
-      {% if page.share %}{% include social-share.html %}{% endif %}
-
-      {% include post_pagination.html %}
+      {% if page.authors %}
+      <div class="talk__authors">
+        <i class="fas fa-users"></i>
+        {{ page.authors }}
+      </div>
+      {% endif %}
     </div>
 
-    {% if site.comments.provider and page.comments %}
-      {% include comments.html %}
-    {% endif %}
-  </article>
+    <!-- Navigation Tabs -->
+    <div class="talk__tabs">
+      <button class="tab-btn active" data-tab="overview">Overview</button>
+      <button class="tab-btn" data-tab="abstract">Abstract</button>
+      <button class="tab-btn" data-tab="resources">Resources</button>
+    </div>
 
-  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
-  {% if page.id and page.related and site.related_posts.size > 0 %}
-    <div class="page__related">
-      {% if site.data.ui-text[site.locale].related_label %}
-        <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
-      {% endif %}
-      <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
+    <!-- Tab Content -->
+    <div class="talk__tab-content">
+      <!-- Overview Tab -->
+      <div id="overview" class="tab-panel active">
+        <div class="overview-grid">
+          <div class="overview-section">
+            <h3><i class="fas fa-bullseye"></i> Key Points</h3>
+            <ul class="key-points">
+              <li>Unified Execution Model for streaming and batch processing</li>
+              <li>Advanced Semantic Operations with ML integration</li>
+              <li>Built-in guardrails and access control mechanisms</li>
+            </ul>
+          </div>
+
+          <div class="overview-section">
+            <h3><i class="fas fa-laptop-code"></i> Applications</h3>
+            <ul class="applications">
+              <li>Real-time copyright infringement detection</li>
+              <li>Continuous and agentic prompts</li>
+              <li>Event detection in live video streams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abstract Tab -->
+      <div id="abstract" class="tab-panel">
+        <div class="talk__content" itemprop="description">
+          {{ content }}
+        </div>
+      </div>
+
+      <!-- Resources Tab -->
+      <div id="resources" class="tab-panel">
+        <div class="resources-grid">
+          {% if page.paperurl %}
+          <div class="resource-card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Paper</h3>
+            <p>Read our paper published in CIDR 2025</p>
+            <a href="{{ page.paperurl }}" class="btn btn--primary" target="_blank">
+              View Paper
+            </a>
+          </div>
+          {% endif %}
+
+          {% if page.slides %}
+          <div class="resource-card">
+            <i class="fas fa-presentation"></i>
+            <h3>Slides</h3>
+            <p>View the presentation slides</p>
+            <a href="{{ page.slides }}" class="btn btn--info" target="_blank">
+              View Slides
+            </a>
+          </div>
+          {% endif %}
+
+          <div class="resource-card">
+            <i class="fas fa-code"></i>
+            <h3>Demo</h3>
+            <p>Interactive VectraFlow pipeline demo</p>
+            <img src="{{ base_path }}/images/blog/vectraflow-demo.png" alt="VectraFlow Demo" class="resource-image">
+          </div>
+        </div>
       </div>
     </div>
-  {% endif %}
+  </article>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabBtns.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and panels
+        tabBtns.forEach(btn => btn.classList.remove('active'));
+        tabPanels.forEach(panel => panel.classList.remove('active'));
+
+        // Add active class to clicked button and corresponding panel
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+  });
+</script>

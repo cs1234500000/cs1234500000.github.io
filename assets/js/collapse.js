@@ -1,16 +1,21 @@
 $(".header").click(function () {
-
-    $header = $(this);
-    //getting the next element
-    $content = $header.next();
-    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-    $content.slideToggle(500, function () {
-        //execute this after slideToggle is done
-        //change text of header based on visibility of content div
-        $header.text(function () {
-            //change text based on condition
-            return $content.is(":visible") ? "Collapse" : "Expand";
-        });
+    const $header = $(this);
+    const $content = $header.next();
+    
+    $content.slideToggle(300, function () {
+        $header.text($content.is(":visible") ? "Collapse" : "Expand");
     });
 
+    // Add smooth transition for icon rotation
+    $header.find('.icon').toggleClass('rotated');
+});
+
+// Add smooth scrolling to all links
+$(document).ready(function() {
+    $('a[href*="#"]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 500, 'linear');
+    });
 });
