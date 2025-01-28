@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" role="main">
+    {% include sidebar.html %}
+
+    <div class="archive single-column">
+        {% unless page.header.overlay_color or page.header.overlay_image %}
+        <h1 class="page__title">{{ page.title }}</h1>
+        {% endunless %}
+
+        <div class="page__content">
+            {{ content }}
+        </div>
+
+        {% if page.news %}
+        <div class="news">
+            <h2>News</h2>
+            {% assign all_posts = site.posts | concat: site.talks | sort: 'date' | reverse %}
+            {% for post in all_posts limit:4 %}
+            {% include archive-single-cv.html %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if page.research %}
+        <div class="research">
+            <h2>Research Projects</h2>
+            {% for project in page.research %}
+            {% include archive-single.html type="grid" %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+    .archive.single-column {
+        float: right;
+        padding-right: 0;
+        padding-left: 4.5em;
+        width: calc(100% - 300px);
+    }
+
+    .page__content {
+        margin-bottom: 3em;
+        text-align: justify;
+        font-size: 0.9em;
+        line-height: 1.8;
+    }
+
+    .news,
+    .research {
+        margin-top: 2em;
+        margin-bottom: 3em;
+    }
+
+    h2 {
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid #f2f3f3;
+        margin-top: 2em;
+        color: #494e52;
+    }
+
+    @media screen and (max-width: 600px) {
+        .archive.single-column {
+            float: none;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+        }
+    }
+</style>

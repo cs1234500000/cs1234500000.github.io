@@ -9,7 +9,9 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
+gem "jekyll", "~> 3.9.3"
 gem "github-pages", group: :jekyll_plugins
+gem "webrick", "~> 1.8"
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
