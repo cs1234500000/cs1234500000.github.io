@@ -14,8 +14,8 @@ I am a PhD student in the Department Computer Science at Brown University, where
 My work has leveraged techniques from machine learning, data management systems, parallel and distributed systems. I am interested in machine learning for computer systems, especially database systems. The goal of my research is to enhance traditional core system components using ML.
 
 ## News
-* **Jan 2025** - VectraFlow: An AI-Augmented Data-Flow System at NEDB DAY 2025 [Talk]
-* **Jan 2025** - VectraFlow: Bridging AI and Database Systems [Blog Post]
+* **Jan 2025** - [VectraFlow: An AI-Augmented Data-Flow System](/talks/2025-01-09-vectraflow) at NEDB DAY 2025 [Talk]
+* **Jan 2025** - [VectraFlow: Bridging AI and Database Systems](/posts/2025/01/vectraflow-blog) [Blog Post]
 
 ## Research Projects
 My current and past research projects include:
