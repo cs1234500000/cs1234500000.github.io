@@ -87,9 +87,7 @@ author:
   location         : # removed
   employer         : "Brown University"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "your-google-scholar-id"
   email            : "shu_chen@brown.edu"
-  researchgate     : "Shu-Chen-48"
   uri              :
   bitbucket        :
   codepen          :
@@ -104,7 +102,6 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "shu-chen-69a36614a"
-  orcid            : "your-orcid-id"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -116,7 +113,6 @@ author:
   xing             : 
   youtube          :
   wikipedia        :
-  xiaohongshu      : "https://www.xiaohongshu.com/user/profile/586557d250c4b43a193e970f"
   mastodon         : "https://mastodon.social/@s388chen"
 
 

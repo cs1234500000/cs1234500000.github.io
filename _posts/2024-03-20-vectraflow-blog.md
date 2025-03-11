@@ -1,6 +1,6 @@
 ---
 title: 'VectraFlow: Bridging AI and Database Systems'
-date: 2024-03-20
+date: 2025-01-09
 permalink: /posts/2024/03/vectraflow-blog/
 header:
   teaser: "blog/vectraflow-demo.png"

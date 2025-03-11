@@ -36,23 +36,11 @@ Skills
   * Java
   * Python
 
-
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
   
 Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
 Service and leadership
@@ -64,6 +52,6 @@ Service and leadership
 
 Honours and awards
 ======
-* President’s Scholarship, 2015
+* President's Scholarship, 2015
 * Math/ELAS Scholarship, 2015
 * Graduation with Distinction, 2018
