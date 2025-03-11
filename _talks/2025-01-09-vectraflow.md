@@ -1,11 +1,18 @@
 ---
 title: "VectraFlow: An AI-Augmented Data-Flow System"
+layout: single
 collection: talks
 type: "NEDB DAY Talk"
 permalink: /talks/2025-01-09-vectraflow
-venue: "NEDB DAY 2025"
 date: 2025-01-09
 location: "Brandeis University"
+header:
+  teaser: "blog/vectraflow-demo.png"
+tags:
+  - AI Systems
+  - Database Systems
+  - Data Processing
+  - Machine Learning
 ---
 
 ## Abstract
@@ -23,6 +30,8 @@ Traditional database systems excel at structured data processing but struggle wi
 * **Reliability & Security**: Built-in guardrails and access control mechanisms
 * **Multi-modal Support**: Handles diverse data types and AI-driven applications
 
-## Presentation
+## Demo
 
 Join us for a live demo and detailed discussion of the system architecture and its applications.
+![VectraFlow Demo Interface](/images/blog/vectraflow-demo.png)
+*VectraFlow's intuitive pipeline interface for processing medical records*

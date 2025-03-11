@@ -180,6 +180,7 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+    layout: single  # This makes talks use the same layout as posts
   posts:
     output: true
     permalink: /:collection/:path/
